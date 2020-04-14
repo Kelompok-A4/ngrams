@@ -10,8 +10,8 @@ struct Node
     struct Node *prev;; 
 }; 
   
-struct Node *RandomValue(struct Node *head, int n_kata){ 
-    int n_random = (rand() % (n_kata + 1)); // merandom head keberapa
+struct Node *RandomValue(struct Node *head, int word_count){ 
+    int n_random = (rand() % (word_count + 1)); // merandom head keberapa
     struct Node *current = head;
 
     // Jika list kosong
