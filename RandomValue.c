@@ -10,19 +10,17 @@ struct Node
     struct Node *prev;; 
 }; 
   
-struct node RandomValue(struct Node *head, int n_kata){ 
+struct Node *RandomValue(struct Node *head, int n_kata){ 
     int n_random = (rand() % (n_kata + 1)); // merandom head keberapa
-    struct node *curr_node = head;
+    struct Node *current = head;
 
     // Jika list kosong
     if (head == NULL) 
-       return; 
-    // menginisialisasi node pertama
-    char result = head->key; 
+       return 0; 
     int n;
     // Iterasi head ke head yang telah dirandom
-    for (n=0; n = n_random; n++) { 
-           head = curr_node->next; 
+    for (n=0; n<=n_random; n++) { 
+           head = current->next; 
     } 
     return head; 
 } 
