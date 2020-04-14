@@ -16,8 +16,6 @@ int main(){
 
     printf("Masukkan nama file: ");
     scanf("%s", filename);
-    printf("Masukkan nama pelanggan yang ingin dicari: ");
-    scanf("%d", n);
     fptr = fopen(filename, "r");
     if(fptr == NULL) {
         printf("File tidak ditemukan!");
