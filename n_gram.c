@@ -6,7 +6,6 @@
 // Source
 // https://www.geeksforgeeks.org/circular-singly-linked-list-insertion/
 // https://www.geeksforgeeks.org/circular-linked-list-set-2-traversal/
-// https://www.geeksforgeeks.org/select-a-random-node-from-a-singly-linked-list/
 
 // Variabel
 char filename [100]; // Menampung nama file external
