@@ -90,8 +90,9 @@ void lookup(char filename[], int n){
     FILE *fp;
     count_iteration = 0;
     count_words = 0;
-    struct Node* last = NULL;
-    struct Node* jalanjalan;
+    struct Node* last = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* jalanjalan = (struct Node*)malloc(sizeof(struct Node));
+    last = NULL;
     fp = fopen(filename, "r");
     if (fp == NULL){
         printf("File tidak ditemukan!\n");
@@ -99,7 +100,9 @@ void lookup(char filename[], int n){
         exit(0);
     }
     else{
+    fclose(fp);
     while (count_iteration <= n){
+        fp = fopen(filename, "r");
         count_iteration += 1;
         if (count_iteration == 1){
             while(fgets(buffer, 100, fp) != NULL) //Ambil baris per baris
