@@ -20,6 +20,8 @@ void RandomValue(struct Node **head){
     }
     *head = temp->next;
 }
+
+//Fungsi untuk mengeprint kata yang telah dirandom sesuai dengan jumlah yang telah diminta
 void printOutput(struct Node *head, int word_count){
     int count = 1;
     struct Node *temp = head;
@@ -31,7 +33,8 @@ void printOutput(struct Node *head, int word_count){
     }
     printf("...\n");
 }
-void printList2(struct Node *first)
+
+/*void printList2(struct Node *first)
 {
     struct Node *temp = first;
 
@@ -42,4 +45,4 @@ void printList2(struct Node *first)
        
             printf("%s\n", temp->value);
     }
-}
+}*/
