@@ -8,13 +8,13 @@ void RandomValue(struct Node **head){
     temp = *head;
 
     // Jika list kosong
-     if (head != NULL) {
-       
-    // Iterasi head ke head yang telah dirandom
-    for (int n=0; n<=n_random; n++){}}
+    if (head != NULL) {
+      for (int n=0; n<=n_random; n++){
+        }
+    }
     int n;
     // Iterasi head ke head yang telah dirandom
-     for (n=0; n<=n_random; n++) { 
+    for (n=0; n<=n_random; n++) { 
         *head = temp->next;
          temp = *head;
     }
