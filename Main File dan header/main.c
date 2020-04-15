@@ -17,6 +17,7 @@
 int main(){
     char filename [100]; // Menampung nama file external
     int n; // Menampung nilai n
+    int n_random; // Menampung banyak kata random yang diinginkan
     int current_menu = 1;
     int go = 1;
     char choice1, choice2;
@@ -42,7 +43,7 @@ int main(){
 
         case 2:
             printf("Masukkan Jumlah kata yang diinginkan:\n");
-            //input jumlah kata
+            scanf("%d", &n_random);
             current_menu = 3;
             break;
 
