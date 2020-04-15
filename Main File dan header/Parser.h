@@ -23,8 +23,7 @@ struct little_node // Struktur data yang menyimpan value
 };
 */
 /* Fungsi untuk mencari character dalam linked list*/
-void search(struct Node* head, char word[]) 
-{ 
+int search(struct Node* head, char word[]) { 
     struct Node* current = head;  
     while (current != NULL) 
     { 
