@@ -15,7 +15,7 @@ struct Node // Struktur data yang merupakan basis struktur LookUpTabel
 };
 
 /* Fungsi untuk mencari character dalam linked list*/
-int search(struct Node *head, char word[])
+/*int search(struct Node *head, char word[])
 {
  int index = 0;
     struct Node *current = head;
@@ -36,6 +36,7 @@ int search(struct Node *head, char word[])
     // Jika tidak ditemukan
     return -1;
 }
+*/
 // Fungsi untuk push kata-kata sebagai key dalam CLL
 struct Node* push_initkey(struct Node **last_reff, char data [100]){
     struct Node *temp = (struct Node*)malloc(sizeof(struct Node));
@@ -101,7 +102,7 @@ void printList(struct Node *first)
     }
 }
 
-void lookup(char filename[], int n){
+void lookup(char filename[], int n, struct Node **head){
     int count_iteration; // Acuan aksi dalam iterasi
     char buffer[100]; // Menampung token parsing
     int count_words; // Menampung jumlah kata dalam file input
@@ -190,8 +191,8 @@ void lookup(char filename[], int n){
 
     }
     fclose(fp);
+    *head = last;
     }
     //printList(last); // Testing print LookupTable
     }
-    return;
 }

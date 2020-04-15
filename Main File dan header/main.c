@@ -1,12 +1,3 @@
-/* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
-* MODUL 8 – TUGAS BESAR
-* Kelompok : A4
-* Hari dan Tanggal : Rabu, 15 April 2020
-* Asisten (NIM) : Sarah Az Zahra (13216099)
-* Nama File : Parser.h
-* Deskripsi : Main file 
-*/
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -16,11 +7,11 @@
 // Variabel
 int main(){
     char filename [100]; // Menampung nama file external
-    int n; // Menampung nilai n
-    int n_random; // Menampung banyak kata random yang diinginkan
+    int n, word_count; // Menampung nilai ngram dan jumlah kata random yang diinginkan
     int current_menu = 1;
     int go = 1;
     char choice1, choice2;
+    struct Node* list = NULL;
     printf("Judul:\n");
     printf("N-Gram based Random Text Generator\n");
     printf("\n");
@@ -37,19 +28,21 @@ int main(){
             scanf(" %[^\n]s ",filename);
             printf("Masukan nilai n :");
             scanf("%d", &n);
-            lookup(filename, n);
+            lookup(filename,n, &list);
             current_menu = 2;
             break;
 
         case 2:
             printf("Masukkan Jumlah kata yang diinginkan:\n");
-            scanf("%d", &n_random);
+            scanf("%d", &word_count);
             current_menu = 3;
             break;
 
         case 3 :
             printf("this is output\n");
-            //output  
+            RandomValue(&list);
+            printOutput(list, word_count);
+            //printList2(list);
             current_menu = 4;
             break;
         
@@ -93,7 +86,3 @@ int main(){
     }while(go =1);
     return 0;
 }
-    
-
-
-
