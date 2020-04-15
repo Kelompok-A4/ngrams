@@ -23,18 +23,19 @@ struct little_node // Struktur data yang menyimpan value
 };
 */
 /* Fungsi untuk mencari character dalam linked list*/
-void search(struct Node* head, int x) 
+void search(struct Node* head) 
 { 
     struct Node* current = head;  
     while (current != NULL) 
     { 
-        if (strcmp(current->data, x)){ 
+        char* token = strtok(current->key, " ");
+        if (strcmp(current->value, token)){ 
             return 1; 
         }
         current = current->next; 
     } 
     return 0; 
-} 
+}  
 // Fungsi untuk push kata-kata sebagai key dalam CLL
 struct Node* push_initkey(struct Node **last_reff, char data [100]){
     struct Node *temp = (struct Node*)malloc(sizeof(struct Node));
@@ -194,18 +195,3 @@ void lookup(char filename[], int n){
     }
     return;
 }
-
-void search(struct Node* head) 
-{ 
-    struct Node* current = head;  
-    while (current != NULL) 
-    { 
-        char* token = strtok(current->key, " ");
-        if (strcmp(current->value, token)){ 
-            return 1; 
-        }
-        current = current->next; 
-    } 
-    return 0; 
-} 
-
