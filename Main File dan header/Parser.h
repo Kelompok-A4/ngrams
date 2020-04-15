@@ -195,4 +195,17 @@ void lookup(char filename[], int n){
     return;
 }
 
+void search(struct Node* head) 
+{ 
+    struct Node* current = head;  
+    while (current != NULL) 
+    { 
+        char* token = strtok(current->key, " ");
+        if (strcmp(current->value, token)){ 
+            return 1; 
+        }
+        current = current->next; 
+    } 
+    return 0; 
+} 
 
