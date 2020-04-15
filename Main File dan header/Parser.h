@@ -14,27 +14,28 @@ struct Node // Struktur data yang merupakan basis struktur LookUpTabel
     struct Node *prev;
 };
 
-/*
-struct little_node // Struktur data yang menyimpan value
-{
-    char value [100];
-    struct little_node *next;
-    struct little_node *prev;
-};
-*/
 /* Fungsi untuk mencari character dalam linked list*/
-int search(struct Node* head, char word[]) { 
-    struct Node* current = head;  
-    while (current != NULL) 
-    { 
+int search(struct Node *head, char word[])
+{
+ int index = 0;
+    struct Node *current = head;
+    do 
+    {
         char* token = strtok(current->key, " ");
-        if (strcmp(word, token)){ 
-            return 1; 
-        }
-        current = current->next; 
-    } 
-    return 0; 
-}  
+  //Jika kosong
+  if (current == NULL)
+   return;
+  
+  if (strcmp(word, token))
+   return index;
+
+        current = current->next;
+  index++;
+    } while (current != head);
+
+    // Jika tidak ditemukan
+    return -1;
+}
 // Fungsi untuk push kata-kata sebagai key dalam CLL
 struct Node* push_initkey(struct Node **last_reff, char data [100]){
     struct Node *temp = (struct Node*)malloc(sizeof(struct Node));
