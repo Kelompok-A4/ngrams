@@ -42,7 +42,6 @@ int main(){
             printf("this is output\n");
             RandomValue(&list);
             printOutput(list, word_count);
-            //printList2(list);
             current_menu = 4;
             break;
         
