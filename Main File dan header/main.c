@@ -39,7 +39,6 @@ int main(){
             break;
 
         case 3 :
-            printf("this is output\n");
             RandomValue(&list);
             printOutput(list, word_count);
             current_menu = 4;
