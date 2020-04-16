@@ -172,6 +172,6 @@ void lookup(char filename[], int n, struct Node **head){
     fclose(fp);
     *head = last;
     }
-    printList(last); // Testing print LookupTable
+    //printList(last); // Testing print LookupTable
     }
 }
