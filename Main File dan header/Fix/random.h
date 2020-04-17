@@ -31,16 +31,13 @@ struct Node* RandomValue(struct Node **head){
     *head = temp->next;
     return *head;
 }
-
+// Fungsi ini untuk mencari sebuah kata dalam linked list dan copy data linked list yang mempunyai kata tersebut kedalam linked list baru. 
 struct Node* search(struct Node *head, char word[])
 {
     struct Node *current = head;
     struct Node *searched = NULL;
     char delimiter[] = " ";
     char *firstWord, *secondWord, *remainder, *context;
-
- 
-
     do 
     {
         int inputLength = strlen(current->key);
