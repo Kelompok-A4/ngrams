@@ -1,3 +1,12 @@
+/* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
+* MODUL 8 – TUGAS BESAR
+* Kelompok : A4
+* Hari dan Tanggal : Kamis, 17 April 2020
+* Asisten (NIM) : Sarah Az Zahra (13216099)
+* Nama File : header.h
+* Deskripsi : Fungsi berisi Randomization, search, dan output
+*/
+
 #include <stdlib.h>
 #include <stdio.h>
   
