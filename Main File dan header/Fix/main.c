@@ -4,7 +4,7 @@
 * Hari dan Tanggal : Kamis, 16 April 2020
 * Asisten (NIM) : Sarah Az Zahra (13216099)
 * Nama File : Main.c
-* Deskripsi : Fungsi Main
+* Deskripsi : Fungsi Main hasil implementasi tugas besar
 */
 
 #include <stdlib.h>
