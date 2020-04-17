@@ -3,8 +3,8 @@
 * Kelompok : A4
 * Hari dan Tanggal : Rabu, 15 April 2020
 * Asisten (NIM) : Sarah Az Zahra (13216099)
-* Nama File : Parser.h
-* Deskripsi : Header yang berisi fungsi untuk melakukan parsing text file
+* Nama File : Main.h
+* Deskripsi : Fungsi Main
 */
 
 #include <stdlib.h>
