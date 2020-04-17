@@ -9,7 +9,8 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-  
+
+//Fungsi untuk mengrandom nilai head yang akan digunakan
 struct Node* RandomValue(struct Node **head){ 
     struct Node* temp = (struct Node*) malloc(sizeof(struct Node));
     int n_random = (rand() % 100); // merandom head keberapa
@@ -35,7 +36,6 @@ struct Node* search(struct Node *head, char word[])
 {
     struct Node *current = head;
     struct Node *searched = NULL;
-    //printf("\n\nthis is the start key %s\n\n", current->key);
     char delimiter[] = " ";
     char *firstWord, *secondWord, *remainder, *context;
 
